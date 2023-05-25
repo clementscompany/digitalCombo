@@ -149,7 +149,7 @@ color: var(--border-color--);
     width: 350px;
     height: 100vh;
     border-left: 1px solid var(--opacity-1--);
-    display: block;
+    display: none;
 
 }.left.active{
     display: block;

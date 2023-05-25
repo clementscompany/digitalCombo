@@ -1,0 +1,153 @@
+body{
+    position: relative;
+    background-color: var(--body--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.card-login{
+    width: 320px;
+    max-width: 320px;
+    padding: 12px;
+    background-color: var(--branca--);
+    border-radius: var(--radius-1--);
+}
+.card-login .form{
+    border: 2px solid var(--body--);
+    border-radius: var(--radius-1--);
+    padding: 5px;
+}
+.icon-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: center;
+}
+.icon-top .bi{
+    border: 2px solid var(--body--);
+    position: absolute;
+    background-color: var(--branca--);
+    color: var(--body--);
+    padding: 12px;
+    border-radius: var(--radius-100--);
+}
+.title{
+    text-align: center;
+    color: var(--text-color--);
+}
+.title span{
+    color: var(--body--);
+}
+.input-box{
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+    height: 44px;
+}
+.input-box input{
+    font-size: 12pt;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid var(--body--);
+    outline: none;
+    border-radius: var(--radius-1--);
+    height: 100%;
+    padding: 0px 12px;
+}
+.input-box input:focus{
+    border: 2px solid var(--body--);
+}
+.input-box span{
+    color: var(--body--);
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    background-color: var(--branca--);
+    font-weight: bold;
+}
+.link{
+    position: relative;
+}
+.link a{
+    color: var(--body--);
+}.link a:hover{
+    text-decoration: underline;
+}
+.send{
+    background-color: var(--body--);
+    color: var(--branca--);
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 22px;
+    margin: 22px 0;
+    border-radius: var(--radius-1--);
+}.send:hover{
+    transition: all .3s ease ;
+    background-color: var(--hover-btn--) ;
+}
+.errorText{
+    background-color: var(--backdrop--);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.errorCard{
+    border-radius: var(--radius-1--);
+    padding-top: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 320px;
+    height: 150px;
+    background-color: var(--branca--);
+}
+.errorCard .top{
+    width: 100%;
+    text-align: center;
+}
+.errorCard .top span{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    color: var(--body--);
+    font-weight: 500;
+    font-size: 12pt;
+}
+.top span i{
+    background-color: red;
+    color: var(--branca--);
+    font-size: 22px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-100--);
+}
+.errorCard #bnCloseError{
+    margin-left: 22px;
+    line-height: 60px;
+    padding: 10px 22px;
+    background-color: var(--body--);
+    border-radius: var(--radius-1--);
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease;
+}.errorCard #bnCloseError:hover{
+    background-color: var(--hover-btn--);
+}

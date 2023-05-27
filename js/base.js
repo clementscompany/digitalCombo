@@ -11,3 +11,11 @@ function toggleBar(){
       
     });
 }
+function cardSearch(){
+ const searsBar = document.getElementById('cardSearch');
+ searsBar.classList.add('active');
+ searsBar.addEventListener("click", (event)=>{
+  if(event.target.id == 'closeSearch');
+  searsBar.classList.remove('active');
+ });
+ }

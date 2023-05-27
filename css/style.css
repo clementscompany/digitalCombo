@@ -19,8 +19,10 @@ li{
     --opacity-1--:rgba(119, 118, 118, 0.397);
     --opacity-2--:rgba(94, 92, 92, 0.527);
     --opacity-3--:rgba(59, 59, 59, 0.568);
+    --opacity-4--:rgba(24, 24, 24, 0.568);
     --border-color--:rgb(0, 225, 255);
     --radius-1--:8px;
     --radius-100--:50%;
+    --verde--:green;
 
 }

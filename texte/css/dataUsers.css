@@ -1,0 +1,133 @@
+.dataUsers{
+    padding: 12px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dataUsers.active{
+    display: none;
+
+}
+@media screen and (max-width:1000px) {
+    .dataUsers >.contentInputs{
+        flex: 1 500px;
+        padding: 22px;
+        height: 600px;
+    }
+    .contentInputs{
+        width: 100%;
+        background-color: #ffff;
+        border-radius: 6px;
+        height: 500px;
+        overflow-y: auto;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.contentInputs{
+    position: relative;
+    width: calc(100% - 300px);
+    background-color: #ffff;
+    border-radius: 6px;
+    height: 400px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.contentInputs form{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 22px;
+}
+.contentInputs form >*{
+    flex: 1 1 320px;
+
+}
+.inputBox{
+    width: 300px;
+   max-width: 300px;
+    height: 44px;
+}
+.inputBox input{
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid dodgerblue;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+
+}
+.inputBox > button{
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 6px;
+    color: #ffff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    height: 44px;
+    height: 100%;
+}
+.inputBox input[type="file"]{
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.171);
+    background-color: rgba(128, 128, 128, 0.171);
+    color: gray;
+}
+.inputBox input[type="file"]::-webkit-file-upload-button{
+    background-color: #f1f1f1;
+    color: dodgerblue;
+    border: none;
+    border-radius: 6px;
+}
+
+.cr{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+}
+.visializeBtn{
+    width: 150px;
+    height: 33px;
+    border-radius: 6px;
+    color: #ffff;
+    border: none;
+    background-color: dodgerblue;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.visializeBtn:hover{
+    background-color: rgba(30, 143, 255, 0.678);
+}
+
+.voltar{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 22px;
+    left: 22px;
+    z-index: 15;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    color: #ffff;   
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.voltar:hover{
+    background-color: rgba(30, 143, 255, 0.678);
+}

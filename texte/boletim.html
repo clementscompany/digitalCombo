@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dataUsers.css">
+    <link rel="stylesheet" href="css/folha.css">
+    <title>Documento</title>
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <img src="texte.jpg" class="imagem-cobertura">
+            <div class="texts">
+                 <div class="cards">
+                    <div class="textoCpf">
+                        <span id="id"><!--  --></span>
+                    </div>
+                    <div class="images">
+                        <img id="perfilImage">
+                    </div>
+                    <div class="images">
+                        <img id="perfilImageUser">
+                    </div>
+                    <div class="assinatura">
+                        <img id="placeholderAss">
+                    </div>
+                 </div>
+                 <div class="cards">
+                    <div class="words">
+                        <div class="word">
+                            <span class="cp" id="registro"><!--  --></span><br>
+                           <div class="nome"><span class="ci" id="nome"><!--  --></span></div> 
+                        </div>
+                        <div class="word">
+                            <span class="dt" id="dataExpedi"><!--  --></span>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <div class="words">
+                        <div class="word">
+                            <span class="mae" id="nomePai"><!--  --></span><br>
+                            <span>E  <span class="pai" id="nomeMae"><!--  --></span></span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="words">
+                        <div class="word">
+                            <span id="natralidade" ><!--  --> <span class="data" id="dataNasc"><!--  --></span></span><br>
+                            <span class="date" id="docOrdem"><!--  --></span><br>
+                            <span class="cn" id="cn"><!--  --></span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="words">
+                        <div class="word">
+                            <span class="cpf" id="cpf"><!--  --></span><br>
+                        </div>
+                    </div>
+                  
+                 </div>
+            </div>
+        </div>
+       <div class="peintBtns">
+        <button class="imprimirBtn" id="imprimirBtn" onclick="imprimir()">Download</button>
+        <button class="editarBtn" >Continuar Edição</button>
+       </div>
+    </section>
+
+    <!--  -->
+   <style>
+    @media print {
+        .dataUsers{
+            display: none;
+        }
+        .container{
+            display: block;
+        }
+        .imprimirBtn{
+            display: none;
+        }
+    }
+   </style>
+   <div class="cr"><button class="voltar"><<</button></div>
+    <section class="dataUsers"> 
+       <div class="contentInputs">
+        <div class="cr"><button class="visializeBtn">Vizualizar</button></div>
+           <form action="#" class="formContainer">
+           <div class="inputBox">
+            <label for="nome">Nome Completo</label>
+            <input type="text" placeholder="Nome completo..." id="inputNomecompleto">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Filhação Pai</label>
+            <input type="text" placeholder="Digite o nome..." id="filcaCao">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Filhação Mãe</label>
+            <input type="text" placeholder="Digite o nome..." id="maeInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Naturalidade</label>
+            <input type="text" placeholder="Nome..." id="naturalidadeInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Data de Nascimento</label>
+            <input type="date" placeholder="Nome..." id="dataNascInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Doc Origem</label>
+            <input type="text" placeholder="Nome..." id="origemDocinput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">CN:</label>
+            <input type="text" placeholder="CN: LV..." id="cnInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">CPF</label>
+            <input type="text" placeholder="CPF..." id="cpfInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Data de Expedição</label>
+            <input type="text" placeholder="Nome..." id="expeditionInput">
+           </div>
+
+           <div class="inputBox">
+            <label for="nome">Registro Geral</label>
+            <input type="text" placeholder="Nome..." id="idDocumento">
+           </div>
+
+           <div class="inputBox">
+            <label for="#">Digitais</label>
+            <input type="file" id="fotoUser">
+           </div>
+
+           <div class="inputBox">
+            <label for="#">Imagem do Usuario</label>
+            <input type="file" class="inputsFile" id="inputImageUser">
+          </div>
+
+          <div class="inputBox ">
+            <label for="#">Assinatura</label>
+            <input type="file" id="assinaturaInput">
+          </div>
+
+
+             <div class="inputBox">
+                <br>
+                <button id="DownloadButton">Dowload png/jpg</button>
+             </div>
+
+           
+            </form>
+       </div>
+    </section>
+    <script src="js/print.js"></script>
+    <script src="js/write.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script>
+   
+     
+const DownloadButton = document.getElementById('DownloadButton');  
+DownloadButton.onclick = ()=>{
+   var containerOn =  document.querySelector(".container");
+   var containerOff = document.querySelector(".dataUsers");
+   containerOn.classList.add('active');
+   containerOff.classList.add('active');
+
+}
+
+
+
+function imprimir() {
+var container = document.querySelector(".container");
+html2canvas(document.querySelector(".container")).then(canvas => {
+
+const link = document.createElement("a");
+link.download = "captura_de_tela.png";
+link.href = canvas.toDataURL("image/png"); 
+
+link.click();
+});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>
